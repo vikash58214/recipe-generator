@@ -41,7 +41,7 @@ export default function Home() {
   const generateRecipe = async (e) => {
     e.preventDefault();
     if (ingredients.length === 0) {
-      return toast.error("Enter atlist one Ingredients");
+      return toast.error("Enter at least one ingredient.");
     }
     setLoading(true);
     setNewRecipe(true);
