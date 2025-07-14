@@ -26,6 +26,12 @@ export const leftoverRecipes = [
       "Cook for another 3-4 minutes until everything is heated through.",
       "Serve hot, garnished with green onions if desired.",
     ],
+    nutrition: {
+      calories: "420 kcal",
+      protein: "25g",
+      fat: "14g",
+      carbs: "45g",
+    },
   },
   {
     title: "Veggie Pasta Stir-Fry",
@@ -53,6 +59,12 @@ export const leftoverRecipes = [
       "Add chili flakes if desired and cook for another 2 minutes.",
       "Serve hot with fresh herbs or sesame seeds.",
     ],
+    nutrition: {
+      calories: "350 kcal",
+      protein: "9g",
+      fat: "12g",
+      carbs: "48g",
+    },
   },
   {
     title: "Mashed Potato Pancakes",
@@ -77,5 +89,11 @@ export const leftoverRecipes = [
       "Cook 3-4 minutes on each side or until golden brown.",
       "Drain on paper towels and serve with sour cream or ketchup.",
     ],
+    nutrition: {
+      calories: "300 kcal",
+      protein: "6g",
+      fat: "14g",
+      carbs: "35g",
+    },
   },
 ];

@@ -18,14 +18,19 @@ Each recipe must be returned as a JSON object in the following format:
   "difficulty": "string",
   "description": "string",
   "ingredients": ["string", "..."],
-  "instructions": ["string", "..."]
+  "instructions": ["string", "..."],
+  "nutrition": {
+    "calories": "string",
+    "protein": "string",
+    "fat": "string",
+    "carbs": "string"
+  }
 }
 
-Respond with a clean JSON array, without any extra text.
+Respond with a clean JSON array, without any extra text or explanation.
 
 Ingredients: ${ingredients.join(", ")}
 `;
-
     // Call Gemini API
     const geminiRes = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,

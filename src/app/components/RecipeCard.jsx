@@ -57,6 +57,8 @@ export default function RecipeCard({ recipe }) {
         <p className="text-sm text-gray-700 mb-3 line-clamp-2">
           {recipe.description}
         </p>
+
+        {/* Ingredients */}
         <div className="mb-3">
           <h4 className="font-semibold text-gray-800 mb-1">Ingredients:</h4>
           <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
@@ -66,6 +68,22 @@ export default function RecipeCard({ recipe }) {
           </ul>
         </div>
 
+        {/* Nutrition Facts */}
+        {recipe.nutrition && (
+          <div className="mb-3">
+            <h4 className="font-semibold text-gray-800 mb-1">
+              Nutrition Facts:
+            </h4>
+            <ul className="text-sm text-gray-600 space-y-1">
+              <li>🔥 Calories: {recipe.nutrition.calories}</li>
+              <li>💪 Protein: {recipe.nutrition.protein}</li>
+              <li>🥑 Fat: {recipe.nutrition.fat}</li>
+              <li>🍞 Carbs: {recipe.nutrition.carbs}</li>
+            </ul>
+          </div>
+        )}
+
+        {/* Instructions */}
         {showInstructions && (
           <div className="mt-4">
             <h4 className="font-semibold text-gray-800 mb-1">Instructions:</h4>
@@ -77,7 +95,6 @@ export default function RecipeCard({ recipe }) {
           </div>
         )}
 
-        {/* Toggle Button */}
         <button
           onClick={() => setShowInstructions((prev) => !prev)}
           className="mt-4 text-green-600 hover:underline text-sm font-medium transition"
