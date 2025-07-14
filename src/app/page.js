@@ -3,6 +3,7 @@ import { FaPlus } from "react-icons/fa6";
 import { useState } from "react";
 import { FaArrowDown } from "react-icons/fa";
 import { leftoverRecipes } from "./data/leftoverRecipes";
+import toast from "react-hot-toast";
 import { howItWorks } from "./data/howItWorks";
 import RecipeCard from "./components/RecipeCard";
 import HowItWorks from "./components/HowItWorks";
@@ -39,6 +40,9 @@ export default function Home() {
 
   const generateRecipe = async (e) => {
     e.preventDefault();
+    if (ingredients.length === 0) {
+      return toast.error("Enter atlist one Ingredients");
+    }
     setLoading(true);
     setNewRecipe(true);
     try {
